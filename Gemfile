@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mechanize'
 gem 'hirb'
+gem 'devise'
+gem 'kaminari'
+gem 'rinku'

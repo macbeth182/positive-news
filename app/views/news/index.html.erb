@@ -1,0 +1,32 @@
+
+
+<div class= "maincontents">
+<% @news.each do |news| %>
+<div class ="waku">
+<div class= "main-title">
+<%= simple_format(news.title) %>
+</div>
+<div class= "main-article">
+<%= text_url_to_link(news.article).html_safe %>
+</div>
+<div class="name">
+<a href="/users/<%= news.user_id %>">
+  <span>投稿者</span><%= news.user.nickname %>
+    </a>
+      </div>
+<ul class="more_list">
+<li class="list-menu">
+<%= link_to '詳細',"/news/#{news.id}",metod: :show %>
+</li>
+<% if user_signed_in? && current_user.id == news.user_id %>
+ <li class="list-menu">
+<%= link_to '編集', "/news/#{news.id}/edit", method: :get %>
+</li>
+<li class="list-menu">
+<%= link_to '削除', "/news/#{news.id}", method: :delete %>
+</li>
+</ul>
+<% end %>
+</div>
+<% end %>
+</div>

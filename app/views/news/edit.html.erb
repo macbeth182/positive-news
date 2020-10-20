@@ -1,0 +1,12 @@
+<div class="contents row">
+<%= form_tag("/news/#{@news.id}", method: :patch) do %>
+
+    <h3>
+      編集する
+    </h3>
+    <input type="text" name="title" value="<%= @news.title %>"  placeholder="Title">
+    <input type="text" name="article" velue="<%= @news.article%>" placeholder="Article">
+
+<input type="submit" value="SEND">
+  <% end %>
+</div>
