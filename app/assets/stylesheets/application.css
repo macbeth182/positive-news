@@ -15,9 +15,6 @@ display: flex;
 justify-content: flex-end;
 }
 
-.main-title{
-text-align: center;  
-}
 
 .main-article{
 text-align: center;  
@@ -57,6 +54,18 @@ height: 100px;
 .waku{
  border: solid 1px; 
 margin-bottom: 50px;
+}
+
+.contents_row{
+text-align: center;  
+}
+
+.contents_post{
+border: solid 1px; 
+}
+
+.main-title{
+text-align: center;  
 }
 
 /*

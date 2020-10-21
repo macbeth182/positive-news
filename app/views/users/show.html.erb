@@ -1,9 +1,13 @@
-<div class="contents row">
+<div class="contents_row">
   <p><%= @nickname %>さんの投稿一覧</p>
   <% @news.each do |news| %>
     <div class="content_post" >
+    <div class="waku">
       <%= simple_format(news.title) %>
-          <span class="name"><%= news.article %></span>
-    </div>
-  <% end %>  
+          <span class="name">
+<%= text_url_to_link(news.article).html_safe %>
+          </span>
+          </div>
+    <% end %>  
+</div>
 </div>
