@@ -5,4 +5,7 @@ resources :news do
 resources :comments, only: [:create]
   end
 resources :users, only: [:show]
+
 end
+
+
